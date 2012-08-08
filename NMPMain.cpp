@@ -109,7 +109,7 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     FlexGridSizer1->Add(Button_phpRun, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button_phpConf = new wxButton(this, ID_BUTTON4, _("Configure..."), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
     FlexGridSizer1->Add(Button_phpConf, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText_html = new wxStaticText(this, ID_STATICTEXT7, _("HTML-ROOT:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
+    StaticText_html = new wxStaticText(this, ID_STATICTEXT7, _("HTML-Root:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
     wxFont StaticText_htmlFont(10,wxDEFAULT,wxFONTSTYLE_NORMAL,wxBOLD,false,wxEmptyString,wxFONTENCODING_DEFAULT);
     StaticText_html->SetFont(StaticText_htmlFont);
     FlexGridSizer1->Add(StaticText_html, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
@@ -120,7 +120,7 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     FlexGridSizer1->Add(Button_htmlOpen, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SetSizer(FlexGridSizer1);
     Timer_checkProcess.SetOwner(this, ID_TIMER1);
-    Timer_checkProcess.Start(1000, false);
+    Timer_checkProcess.Start(500, false);
     FlexGridSizer1->Fit(this);
     FlexGridSizer1->SetSizeHints(this);
     Center();

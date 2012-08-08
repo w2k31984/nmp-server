@@ -160,7 +160,7 @@
 			</object>
 			<object class="sizeritem">
 				<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText_html" member="yes">
-					<label>HTML-ROOT:</label>
+					<label>HTML-Root:</label>
 					<font>
 						<size>10</size>
 						<style>normal</style>
@@ -197,7 +197,7 @@
 			</object>
 		</object>
 		<object class="wxTimer" name="ID_TIMER1" variable="Timer_checkProcess" member="yes">
-			<interval>1000</interval>
+			<interval>500</interval>
 			<handler function="OnTimer_checkProcessTrigger" entry="EVT_TIMER" />
 		</object>
 	</object>
