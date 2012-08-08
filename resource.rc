@@ -1,0 +1,25 @@
+// don't add wx icons, bitmaps, ...
+//#include "wx/msw/wx.rc"
+
+APP_ICO ICON "app.ico"
+
+//include version information in .exe, modify these values to match your needs
+1 VERSIONINFO
+FILEVERSION     0,6,0,0 // Major Version, Minor Version, Revision, Build
+//PRODUCTVERSION  0,0,0,0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904E4"
+        BEGIN
+        //VALUE "CompanyName", "My Company Name"
+        //VALUE "FileDescription", "My excellent application"
+        //VALUE "FileVersion", "1.0"
+        //VALUE "InternalName", "my_app"
+        //VALUE "LegalCopyright", "My Name"
+        //VALUE "OriginalFilename", "my_app.exe"
+        //VALUE "ProductName", "ffmpegYAG"
+        //VALUE "ProductVersion", "1.0"
+        END
+    END
+END
