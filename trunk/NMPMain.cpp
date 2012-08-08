@@ -50,6 +50,9 @@ const long NMPDialog::ID_STATICTEXT2 = wxNewId();
 const long NMPDialog::ID_STATICTEXT5 = wxNewId();
 const long NMPDialog::ID_BUTTON3 = wxNewId();
 const long NMPDialog::ID_BUTTON4 = wxNewId();
+const long NMPDialog::ID_STATICTEXT7 = wxNewId();
+const long NMPDialog::ID_BUTTON8 = wxNewId();
+const long NMPDialog::ID_BUTTON7 = wxNewId();
 const long NMPDialog::ID_TIMER1 = wxNewId();
 //*)
 
@@ -63,7 +66,7 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     //(*Initialize(NMPDialog)
     wxFlexGridSizer* FlexGridSizer1;
 
-    Create(parent, id, _("NMP Server"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX, _T("id"));
+    Create(parent, wxID_ANY, _("NMP Server"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX, _T("wxID_ANY"));
     SetIcon(wxICON(APP_ICO));
     FlexGridSizer1 = new wxFlexGridSizer(3, 4, 0, 0);
     FlexGridSizer1->AddGrowableCol(2);
@@ -77,9 +80,9 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     StaticText_nginxStatus->SetFont(StaticText_nginxStatusFont);
     FlexGridSizer1->Add(StaticText_nginxStatus, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
     Button_nginxRun = new wxButton(this, ID_BUTTON5, _("Start"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON5"));
-    FlexGridSizer1->Add(Button_nginxRun, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button_nginxRun, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button_nginxConf = new wxButton(this, ID_BUTTON6, _("Configure..."), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON6"));
-    FlexGridSizer1->Add(Button_nginxConf, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button_nginxConf, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticText_mysql = new wxStaticText(this, ID_STATICTEXT1, _("MySQL:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
     wxFont StaticText_mysqlFont(10,wxSWISS,wxFONTSTYLE_NORMAL,wxBOLD,false,wxEmptyString,wxFONTENCODING_DEFAULT);
     StaticText_mysql->SetFont(StaticText_mysqlFont);
@@ -90,9 +93,9 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     StaticText_mysqlStatus->SetFont(StaticText_mysqlStatusFont);
     FlexGridSizer1->Add(StaticText_mysqlStatus, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
     Button_MySQLRun = new wxButton(this, ID_BUTTON1, _("Start"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
-    FlexGridSizer1->Add(Button_MySQLRun, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button_MySQLRun, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button_MySQLConf = new wxButton(this, ID_BUTTON2, _("Configure..."), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
-    FlexGridSizer1->Add(Button_MySQLConf, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button_MySQLConf, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticText_php = new wxStaticText(this, ID_STATICTEXT2, _("PHP-CGI:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     wxFont StaticText_phpFont(10,wxSWISS,wxFONTSTYLE_NORMAL,wxBOLD,false,wxEmptyString,wxFONTENCODING_DEFAULT);
     StaticText_php->SetFont(StaticText_phpFont);
@@ -103,9 +106,18 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     StaticText_phpStatus->SetFont(StaticText_phpStatusFont);
     FlexGridSizer1->Add(StaticText_phpStatus, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
     Button_phpRun = new wxButton(this, ID_BUTTON3, _("Start"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
-    FlexGridSizer1->Add(Button_phpRun, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button_phpRun, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button_phpConf = new wxButton(this, ID_BUTTON4, _("Configure..."), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
-    FlexGridSizer1->Add(Button_phpConf, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button_phpConf, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    StaticText_html = new wxStaticText(this, ID_STATICTEXT7, _("HTML-ROOT:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
+    wxFont StaticText_htmlFont(10,wxDEFAULT,wxFONTSTYLE_NORMAL,wxBOLD,false,wxEmptyString,wxFONTENCODING_DEFAULT);
+    StaticText_html->SetFont(StaticText_htmlFont);
+    FlexGridSizer1->Add(StaticText_html, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(-1,-1,1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    Button_htmlBrowser = new wxButton(this, ID_BUTTON8, _("Web-Browser"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON8"));
+    FlexGridSizer1->Add(Button_htmlBrowser, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    Button_htmlOpen = new wxButton(this, ID_BUTTON7, _("Open..."), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON7"));
+    FlexGridSizer1->Add(Button_htmlOpen, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SetSizer(FlexGridSizer1);
     Timer_checkProcess.SetOwner(this, ID_TIMER1);
     Timer_checkProcess.Start(1000, false);
@@ -119,6 +131,8 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NMPDialog::OnButton_MySQLConfClick);
     Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NMPDialog::OnButton_phpRunClick);
     Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NMPDialog::OnButton_phpConfClick);
+    Connect(ID_BUTTON8,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NMPDialog::OnButton_htmlBrowserClick);
+    Connect(ID_BUTTON7,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NMPDialog::OnButton_htmlOpenClick);
     Connect(ID_TIMER1,wxEVT_TIMER,(wxObjectEventFunction)&NMPDialog::OnTimer_checkProcessTrigger);
     Connect(wxID_ANY,wxEVT_INIT_DIALOG,(wxObjectEventFunction)&NMPDialog::OnInit);
     //*)
@@ -179,6 +193,16 @@ void NMPDialog::OnButton_nginxRunClick(wxCommandEvent& event)
 void NMPDialog::OnButton_nginxConfClick(wxCommandEvent& event)
 {
     wxExecute(wxT("notepad.exe ") + nginxExecutable.BeforeLast('\\') + wxT("\\conf\\nginx.conf"));
+}
+
+void NMPDialog::OnButton_htmlBrowserClick(wxCommandEvent& event)
+{
+    wxLaunchDefaultBrowser(wxT("http://localhost"));
+}
+
+void NMPDialog::OnButton_htmlOpenClick(wxCommandEvent& event)
+{
+    wxExecute(wxT("explorer.exe ") + nginxExecutable.BeforeLast('\\') + wxT("\\html"));
 }
 
 void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
@@ -247,6 +271,14 @@ void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
         Button_phpRun->SetLabel(wxT("Kill"));
         Button_phpRun->Enable(true);
         Button_phpConf->Enable(false);
+        if(phpExecutable != wxEmptyString)
+        {
+            //
+        }
+        else
+        {
+            //
+        }
     }
     else
     {
@@ -274,6 +306,14 @@ void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
         Button_nginxRun->SetLabel(wxT("Kill"));
         Button_nginxRun->Enable(true);
         Button_nginxConf->Enable(false);
+        if(nginxExecutable != wxEmptyString)
+        {
+            Button_htmlOpen->Enable(true);
+        }
+        else
+        {
+            Button_htmlOpen->Enable(false);
+        }
     }
     else
     {
@@ -285,11 +325,13 @@ void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
         {
             Button_nginxRun->Enable(true);
             Button_nginxConf->Enable(true);
+            Button_htmlOpen->Enable(true);
         }
         else
         {
             Button_nginxRun->Enable(false);
             Button_nginxConf->Enable(false);
+            Button_htmlOpen->Enable(false);
         }
     }
 }
@@ -338,21 +380,21 @@ void NMPDialog::OnInit(wxInitDialogEvent& event)
 
     if(mysqlExecutable == wxEmptyString)
     {
-        wxMessageBox(wxT("File not Found:\n") + cwd + subDir + wxT("\\bin\\mysqld.exe"));
+        wxMessageBox(wxT("File not Found:\n") + cwd + wxT("%MYSQL%\\bin\\mysqld.exe"));
     }
 
     if(phpExecutable == wxEmptyString)
     {
-        wxMessageBox(wxT("File not Found:\n") + cwd + subDir + wxT("\\php-cgi.exe"));
+        wxMessageBox(wxT("File not Found:\n") + cwd + wxT("%PHP%\\php-cgi.exe"));
     }
 
     if(nginxExecutable == wxEmptyString)
     {
-        wxMessageBox(wxT("File not Found:\n") + cwd + subDir + wxT("\\nginx.exe"));
+        wxMessageBox(wxT("File not Found:\n") + cwd + wxT("%NGINX%\\nginx.exe"));
     }
 
     if(heidiExecutable == wxEmptyString)
     {
-        wxMessageBox(wxT("File not Found:\n") + cwd + subDir + wxT("\\heidisql.exe"));
+        wxMessageBox(wxT("File not Found:\n") + cwd + wxT("%HEIDISQL%\\heidisql.exe"));
     }
 }

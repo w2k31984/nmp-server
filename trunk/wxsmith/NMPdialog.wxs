@@ -4,6 +4,7 @@
 		<title>NMP Server</title>
 		<centered>1</centered>
 		<extra_code>SetIcon(wxICON(APP__ICO));</extra_code>
+		<id_arg>0</id_arg>
 		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
 		<handler function="OnInit" entry="EVT_INIT_DIALOG" />
 		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
@@ -46,7 +47,7 @@
 					<label>Start</label>
 					<handler function="OnButton_nginxRunClick" entry="EVT_BUTTON" />
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
@@ -55,7 +56,7 @@
 					<label>Configure...</label>
 					<handler function="OnButton_nginxConfClick" entry="EVT_BUTTON" />
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
@@ -95,7 +96,7 @@
 					<label>Start</label>
 					<handler function="OnButton_MySQLRunClick" entry="EVT_BUTTON" />
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
@@ -104,7 +105,7 @@
 					<label>Configure...</label>
 					<handler function="OnButton_MySQLConfClick" entry="EVT_BUTTON" />
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
@@ -144,7 +145,7 @@
 					<label>Start</label>
 					<handler function="OnButton_phpRunClick" entry="EVT_BUTTON" />
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
@@ -153,7 +154,44 @@
 					<label>Configure...</label>
 					<handler function="OnButton_phpConfClick" entry="EVT_BUTTON" />
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText_html" member="yes">
+					<label>HTML-ROOT:</label>
+					<font>
+						<size>10</size>
+						<style>normal</style>
+						<weight>bold</weight>
+						<underlined>0</underlined>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="spacer">
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON8" variable="Button_htmlBrowser" member="yes">
+					<label>Web-Browser</label>
+					<handler function="OnButton_htmlBrowserClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON7" variable="Button_htmlOpen" member="yes">
+					<label>Open...</label>
+					<handler function="OnButton_htmlOpenClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>

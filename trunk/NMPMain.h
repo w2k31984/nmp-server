@@ -27,6 +27,8 @@ class NMPDialog: public wxDialog
         void OnButton_nginxConfClick(wxCommandEvent& event);
         void OnTimer_checkProcessTrigger(wxTimerEvent& event);
         void OnInit(wxInitDialogEvent& event);
+        void OnButton_htmlOpenClick(wxCommandEvent& event);
+        void OnButton_htmlBrowserClick(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(NMPDialog)
@@ -42,6 +44,9 @@ class NMPDialog: public wxDialog
         static const long ID_STATICTEXT5;
         static const long ID_BUTTON3;
         static const long ID_BUTTON4;
+        static const long ID_STATICTEXT7;
+        static const long ID_BUTTON8;
+        static const long ID_BUTTON7;
         static const long ID_TIMER1;
         //*)
 
@@ -54,11 +59,14 @@ class NMPDialog: public wxDialog
         wxStaticText* StaticText_nginx;
         wxStaticText* StaticText_phpStatus;
         wxButton* Button_MySQLConf;
+        wxButton* Button_htmlBrowser;
+        wxStaticText* StaticText_html;
         wxButton* Button_phpRun;
         wxButton* Button_nginxRun;
         wxButton* Button_phpConf;
         wxStaticText* StaticText_mysqlStatus;
         wxButton* Button_nginxConf;
+        wxButton* Button_htmlOpen;
         //*)
 
         DECLARE_EVENT_TABLE()
