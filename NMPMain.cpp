@@ -69,7 +69,7 @@ NMPDialog::NMPDialog(wxWindow* parent,wxWindowID id)
     Create(parent, wxID_ANY, _("NMP Server"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX, _T("wxID_ANY"));
     SetIcon(wxICON(APP_ICO));
     FlexGridSizer1 = new wxFlexGridSizer(3, 4, 0, 0);
-    FlexGridSizer1->AddGrowableCol(2);
+    FlexGridSizer1->AddGrowableCol(1);
     StaticText_nginx = new wxStaticText(this, ID_STATICTEXT3, _("Nginx:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
     wxFont StaticText_nginxFont(10,wxSWISS,wxFONTSTYLE_NORMAL,wxBOLD,false,wxEmptyString,wxFONTENCODING_DEFAULT);
     StaticText_nginx->SetFont(StaticText_nginxFont);
