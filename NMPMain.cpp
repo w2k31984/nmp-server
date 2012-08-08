@@ -231,7 +231,7 @@ void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
 
     if(mysql)
     {
-        StaticText_mysqlStatus->SetForegroundColour(wxColour(0,255,0));
+        StaticText_mysqlStatus->SetForegroundColour(wxColour(0,200,0));
         StaticText_mysqlStatus->SetLabel(wxT("Running..."));
 
         Button_MySQLRun->SetLabel(wxT("Kill"));
@@ -265,7 +265,7 @@ void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
 
     if(php)
     {
-        StaticText_phpStatus->SetForegroundColour(wxColour(0,255,0));
+        StaticText_phpStatus->SetForegroundColour(wxColour(0,200,0));
         StaticText_phpStatus->SetLabel(wxT("Running..."));
 
         Button_phpRun->SetLabel(wxT("Kill"));
@@ -300,7 +300,7 @@ void NMPDialog::OnTimer_checkProcessTrigger(wxTimerEvent& event)
 
     if(nginx)
     {
-        StaticText_nginxStatus->SetForegroundColour(wxColour(0,255,0));
+        StaticText_nginxStatus->SetForegroundColour(wxColour(0,200,0));
         StaticText_nginxStatus->SetLabel(wxT("Running..."));
 
         Button_nginxRun->SetLabel(wxT("Kill"));
