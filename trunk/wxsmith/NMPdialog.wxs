@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="NMPDialog">
+		<title>NMP Server</title>
+		<centered>1</centered>
+		<extra_code>SetIcon(wxICON(APP__ICO));</extra_code>
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<handler function="OnInit" entry="EVT_INIT_DIALOG" />
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>4</cols>
+			<rows>3</rows>
+			<growablecols>2</growablecols>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText_nginx" member="yes">
+					<label>Nginx:</label>
+					<font>
+						<size>10</size>
+						<style>normal</style>
+						<weight>bold</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText_nginxStatus" member="yes">
+					<label>Not Running...</label>
+					<fg>#FF0000</fg>
+					<font>
+						<size>10</size>
+						<style>italic</style>
+						<weight>normal</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON5" variable="Button_nginxRun" member="yes">
+					<label>Start</label>
+					<handler function="OnButton_nginxRunClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON6" variable="Button_nginxConf" member="yes">
+					<label>Configure...</label>
+					<handler function="OnButton_nginxConfClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText_mysql" member="yes">
+					<label>MySQL:</label>
+					<font>
+						<size>10</size>
+						<style>normal</style>
+						<weight>bold</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText_mysqlStatus" member="yes">
+					<label>Not Running...</label>
+					<fg>#FF0000</fg>
+					<font>
+						<size>10</size>
+						<style>italic</style>
+						<weight>normal</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON1" variable="Button_MySQLRun" member="yes">
+					<label>Start</label>
+					<handler function="OnButton_MySQLRunClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON2" variable="Button_MySQLConf" member="yes">
+					<label>Configure...</label>
+					<handler function="OnButton_MySQLConfClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText_php" member="yes">
+					<label>PHP-CGI:</label>
+					<font>
+						<size>10</size>
+						<style>normal</style>
+						<weight>bold</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText_phpStatus" member="yes">
+					<label>Not Running...</label>
+					<fg>#FF0000</fg>
+					<font>
+						<size>10</size>
+						<style>italic</style>
+						<weight>normal</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+					</font>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON3" variable="Button_phpRun" member="yes">
+					<label>Start</label>
+					<handler function="OnButton_phpRunClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON4" variable="Button_phpConf" member="yes">
+					<label>Configure...</label>
+					<handler function="OnButton_phpConfClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="Timer_checkProcess" member="yes">
+			<interval>1000</interval>
+			<handler function="OnTimer_checkProcessTrigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>
