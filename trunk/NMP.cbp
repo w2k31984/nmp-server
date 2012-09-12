@@ -15,10 +15,10 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
-					<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\lib\gcc_lib\mswud" />
+					<Add directory="C:\wxMSW\lib\gcc_lib\mswud" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\lib\gcc_lib\mswud" />
+					<Add directory="C:\wxMSW\lib\gcc_lib\mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw28ud.a" />
@@ -27,7 +27,7 @@
 					<Add library="libwxtiffd.a" />
 					<Add library="libwxzlibd.a" />
 					<Add library="libpsapi.a" />
-					<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\lib\gcc_lib" />
+					<Add directory="C:\wxMSW\lib\gcc_lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,10 +38,10 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\lib\gcc_lib\mswu" />
+					<Add directory="C:\wxMSW\lib\gcc_lib\mswu" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\lib\gcc_lib\mswu" />
+					<Add directory="C:\wxMSW\lib\gcc_lib\mswu" />
 				</ResourceCompiler>
 				<Linker>
 					<Add option="-s" />
@@ -51,7 +51,7 @@
 					<Add library="libwxtiff.a" />
 					<Add library="libwxzlib.a" />
 					<Add library="libpsapi.a" />
-					<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\lib\gcc_lib" />
+					<Add directory="C:\wxMSW\lib\gcc_lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -63,17 +63,16 @@
 			<Add option="-D__GNUWIN32__" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\include" />
-			<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\contrib\include" />
+			<Add directory="C:\wxMSW\include" />
+			<Add directory="C:\wxMSW\contrib\include" />
 		</Compiler>
 		<ResourceCompiler>
-			<Add directory="C:\wxDev-Suite\wxMSW-2.8.12\include" />
+			<Add directory="C:\wxMSW\include" />
 		</ResourceCompiler>
 		<Linker>
 			<Add option="-mthreads" />
 			<Add option="-static-libgcc" />
 			<Add option="-static-libstdc++" />
-			<Add option="--enable-auto-import" />
 			<Add library="libkernel32.a" />
 			<Add library="libuser32.a" />
 			<Add library="libgdi32.a" />
@@ -88,7 +87,6 @@
 			<Add library="libwsock32.a" />
 			<Add library="libodbc32.a" />
 			<Add library="libpsapi.a" />
-			<Add directory="C:\wxDev-Suite\MinGW32\lib" />
 		</Linker>
 		<Unit filename="NMPApp.cpp" />
 		<Unit filename="NMPApp.h" />
@@ -106,7 +104,7 @@
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="NMPApp.cpp" main="NMPDialog" init_handlers="necessary" language="CPP" />
 				<resources>
-					<wxDialog wxs="wxsmith/NMPdialog.wxs" src="NMPMain.cpp" hdr="NMPMain.h" name="NMPDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/NMPdialog.wxs" src="NMPMain.cpp" hdr="NMPMain.h" fwddecl="0" i18n="1" name="NMPDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>
