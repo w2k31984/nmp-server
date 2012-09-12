@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="PhpConfigDialog">
+		<title>Configuration Editor</title>
+		<centered>1</centered>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<handler function="OnResize" entry="EVT_SIZE" />
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>1</cols>
+			<growablecols>0</growablecols>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<object class="wxListCtrl" name="ID_LISTCTRL1" variable="ListCtrlEntries" member="yes">
+					<minsize>480,320</minsize>
+					<extra_code>ListCtrlEntries-&gt;InsertColumn(0, wxT(&quot;Key&quot;));&#x0A;ListCtrlEntries-&gt;InsertColumn(1, wxT(&quot;Value&quot;));</extra_code>
+					<style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
+					<handler function="OnListCtrlEntriesItemSelect" entry="EVT_LIST_ITEM_SELECTED" />
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
+					<cols>5</cols>
+					<growablecols>0,1</growablecols>
+					<object class="sizeritem">
+						<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrlKey" member="yes">
+							<value>Key</value>
+							<handler function="OnTextCtrlUpdate" entry="EVT_TEXT" />
+						</object>
+						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="TextCtrlValue" member="yes">
+							<value>Value</value>
+							<handler function="OnTextCtrlUpdate" entry="EVT_TEXT" />
+						</object>
+						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="BitmapButtonAdd" member="yes">
+							<bitmap stock_id="wxART_NEW" />
+							<default>1</default>
+							<size>24,24</size>
+							<tooltip>Add New Entry</tooltip>
+							<style>0</style>
+							<handler function="OnBitmapButtonAddClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="BitmapButtonDelete" member="yes">
+							<bitmap stock_id="wxART_CROSS_MARK" />
+							<default>1</default>
+							<size>24,24</size>
+							<tooltip>Delete Current Entry</tooltip>
+							<style>0</style>
+							<handler function="OnBitmapButtonDeleteClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>
