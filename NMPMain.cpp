@@ -175,7 +175,10 @@ void NMPDialog::OnButton_phpRunClick(wxCommandEvent& event)
 
 void NMPDialog::OnButton_phpConfClick(wxCommandEvent& event)
 {
-    wxExecute(wxT("notepad.exe ") + phpExecutable.BeforeLast('\\') + wxT("\\php.ini"));
+    //wxExecute(wxT("notepad.exe ") + phpExecutable.BeforeLast('\\') + wxT("\\php.ini"));
+
+    PhpConfigDialog confWin(phpExecutable.BeforeLast('\\') + wxT("\\php.ini"));
+    confWin.ShowModal();
 }
 
 void NMPDialog::OnButton_nginxRunClick(wxCommandEvent& event)

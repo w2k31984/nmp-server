@@ -9,6 +9,8 @@
 #include <wx/timer.h>
 //*)
 
+#include "PhpConfigDialog.h"
+
 class NMPDialog: public wxDialog
 {
     public:

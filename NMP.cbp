@@ -92,12 +92,15 @@
 		<Unit filename="NMPApp.h" />
 		<Unit filename="NMPMain.cpp" />
 		<Unit filename="NMPMain.h" />
+		<Unit filename="PhpConfigDialog.cpp" />
+		<Unit filename="PhpConfigDialog.h" />
 		<Unit filename="process.cpp" />
 		<Unit filename="process.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="wxsmith\NMPdialog.wxs" />
+		<Unit filename="wxsmith\PhpConfigDialog.wxs" />
 		<Extensions>
 			<code_completion />
 			<debugger />
@@ -105,6 +108,7 @@
 				<gui name="wxWidgets" src="NMPApp.cpp" main="NMPDialog" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxDialog wxs="wxsmith/NMPdialog.wxs" src="NMPMain.cpp" hdr="NMPMain.h" fwddecl="0" i18n="1" name="NMPDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/PhpConfigDialog.wxs" src="PhpConfigDialog.cpp" hdr="PhpConfigDialog.h" fwddecl="0" i18n="1" name="PhpConfigDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>
