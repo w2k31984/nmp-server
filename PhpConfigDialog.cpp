@@ -62,6 +62,7 @@ PhpConfigDialog::PhpConfigDialog(wxString File, wxWindow* parent, wxWindowID id)
 	Connect(ID_TEXTCTRL2,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&PhpConfigDialog::OnTextCtrlUpdate);
 	Connect(ID_BITMAPBUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&PhpConfigDialog::OnBitmapButtonAddClick);
 	Connect(ID_BITMAPBUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&PhpConfigDialog::OnBitmapButtonDeleteClick);
+	Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&PhpConfigDialog::OnClose);
 	Connect(wxEVT_SIZE,(wxObjectEventFunction)&PhpConfigDialog::OnResize);
 	//*)
 
@@ -75,11 +76,6 @@ PhpConfigDialog::~PhpConfigDialog()
 {
 	//(*Destroy(PhpConfigDialog)
 	//*)
-
-	if(wxMessageBox(wxT("Save Changes to File?"), wxT("Hint"), wxYES_NO) == wxYES)
-	{
-		SaveFile(ConfigurationFile);
-	}
 }
 
 void PhpConfigDialog::LoadFile(wxString File)
@@ -211,4 +207,13 @@ void PhpConfigDialog::OnResize(wxSizeEvent& event)
     wxInt32 halfWidth = (ListCtrlEntries->GetSize().GetWidth()-24)/2;
     ListCtrlEntries->SetColumnWidth(0, halfWidth);
     ListCtrlEntries->SetColumnWidth(1, halfWidth);
+}
+
+void PhpConfigDialog::OnClose(wxCloseEvent& event)
+{
+	if(wxMessageBox(wxT("Save Changes to File?"), wxT("Hint"), wxYES_NO) == wxYES)
+	{
+		SaveFile(ConfigurationFile);
+	}
+	Destroy();
 }
