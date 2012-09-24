@@ -47,6 +47,7 @@ class PhpConfigDialog: public wxDialog
 		void OnBitmapButtonAddClick(wxCommandEvent& event);
 		void OnBitmapButtonDeleteClick(wxCommandEvent& event);
 		void OnResize(wxSizeEvent& event);
+		void OnClose(wxCloseEvent& event);
 		//*)
 
 		public: void LoadFile(wxString File);
